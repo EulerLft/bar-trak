@@ -1,0 +1,122 @@
+{
+    "back squat": {
+        "volume": {
+            "start_volume": 25,
+            "volume_growth": 5,
+            "max_volume_limit": 30,
+            "break_threshold_pct": 0.82, 
+            "absolute_ceiling_pct": 0.85,
+            "acwr_max": 1.3
+        },
+        "intensity": {
+            "intensity_growth_pct": 0.025,
+            "max_volume_limit": 20,
+            "peak_trigger_pct": 0.88,
+            "acwr_max": 1.0
+        },
+        "peak": {
+            "intensity_growth_pct": 0.02,
+            "base_volume": 9,
+            "base_pct" : 0.88,
+            "top_volume": 3,
+            "top_pct" : 0.92,
+            "acwr_max" : 0.9
+        }
+    },
+    "bench press": {
+        "volume": {
+            "start_volume": 25,
+            "volume_growth": 5,
+            "max_volume_limit": 30,
+            "break_threshold_pct": 0.82, 
+            "absolute_ceiling_pct": 0.85,
+            "acwr_max": 1.3
+        },
+        "intensity": {
+            "intensity_growth_pct": 0.025,
+            "max_volume_limit": 20,
+            "peak_trigger_pct": 0.88,
+            "acwr_max": 1.0
+        },
+        "peak": {
+            "intensity_growth_pct": 0.02,
+            "base_volume": 9,
+            "base_pct" : 0.88,
+            "top_volume": 3,
+            "top_pct" : 0.92,
+            "acwr_max" : 0.9
+        }
+    },
+    "deadlift": {
+        "volume": {
+            "start_volume": 25,
+            "volume_growth": 5,
+            "max_volume_limit": 30,
+            "break_threshold_pct": 0.82, 
+            "absolute_ceiling_pct": 0.85,
+            "acwr_max": 1.3
+        },
+        "intensity": {
+            "intensity_growth_pct": 0.025,
+            "max_volume_limit": 20,
+            "peak_trigger_pct": 0.88,
+            "acwr_max": 1.0
+        },
+        "peak": {
+            "intensity_growth_pct": 0.02,
+            "base_volume": 9,
+            "base_pct" : 0.88,
+            "top_volume": 3,
+            "top_pct" : 0.92,
+            "acwr_max" : 0.9
+        }
+    },
+    "ohp": {
+        "volume": {
+            "start_volume": 25,
+            "volume_growth": 5,
+            "max_volume_limit": 30,
+            "break_threshold_pct": 0.82, 
+            "absolute_ceiling_pct": 0.85,
+            "acwr_max": 1.3
+        },
+        "intensity": {
+            "intensity_growth_pct": 0.025,
+            "max_volume_limit": 20,
+            "peak_trigger_pct": 0.88,
+            "acwr_max": 1.0
+        },
+        "peak": {
+            "intensity_growth_pct": 0.02,
+            "base_volume": 9,
+            "base_pct" : 0.88,
+            "top_volume": 3,
+            "top_pct" : 0.92,
+            "acwr_max" : 0.9
+        }
+    },
+    "front squat": {
+        "volume": {
+            "start_volume": 25,
+            "volume_growth": 5,
+            "max_volume_limit": 30,
+            "break_threshold_pct": 0.82, 
+            "absolute_ceiling_pct": 0.85,
+            "acwr_max": 1.3
+        },
+        "intensity": {
+            "intensity_growth_pct": 0.025,
+            "max_volume_limit": 20,
+            "peak_trigger_pct": 0.88,
+            "acwr_max": 1.0
+        },
+        "peak": {
+            "intensity_growth_pct": 0.02,
+            "base_volume": 9,
+            "base_pct" : 0.88,
+            "top_volume": 3,
+            "top_pct" : 0.92,
+            "acwr_max" : 0.9
+        }
+    }
+}
