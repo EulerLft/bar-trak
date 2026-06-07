@@ -1,6 +1,8 @@
 # BAR-TRAK 
 
-![BAR-TRAK logo](assets/logo.JPG)
+<p align="center">
+  <img src="assets/logo.JPG" alt="BAR-TRAK logo" width="500">
+</p>
 
 ## Data-driven powerlifting performance metrics 
 `bar-trak` is a Python-based computational engine and interactive Streamlit dashboard designed for lifters and coaches. 
@@ -22,7 +24,7 @@ The application streamlines training tracking by conducting block periodization 
 ## Training Methodology: Understanding ACWR 
 
 A core component of the `bar-trak` analytical framework relies on monitoring the **Acute-to-Chronic Workload Ratio (ACWR)**. This metric is a well-established sports science standard used to quantify injury risk and manage fatigue. 
-It is defined as follows: \
+It is defined as follows: 
 
 $$\text{ACWR} = \frac{\text{Acute Worjload (Current Week Tonnage)}}{\text{Chronic Workload (Rolling 4-Week Average Tonnage)}}$$ \
 Where **tonnage** is defined as : $$\text{tonnage} = \text{total reps} * \text{weight}$$  
@@ -35,11 +37,12 @@ The engine tracks ACWR to ensure training progressions stay within mathematicall
 
 The application provides a dedicated interface for building long-term training macrocycles. By inputting recent performance parameters from a standard RPE 7 session, including weight, total repetitions, and target timeline. The backend calculation engine establishes an automated training template.\
 The system maps out target metrics week-by-week, utilizing built-in load configuration limits to transition the lifter safely from high-volume accumulation phases into specialized intensity and final peak blocks; provided %1RM and volume are suitable for a peaking block. \
-The interface screenshot below illustrates the macrocycle configuration panel. Users can input specific lift performance metrics and training durations to immediately view and download a completely structured weekly weight, set, and repetition protocol. \
+The interface screenshot below illustrates the macrocycle configuration panel. Users can input specific lift performance metrics and training durations to immediately view and download a completely structured weekly weight, set, and repetition protocol. 
 
 ![Powerlifting Projection (1)](assets/screenshot_1.JPG)
 
 The subsequent breakdown view shows how the model maps out specific intensity thresholds and fatigue projections. This allows coaches and athletes to evaluate the entire trajectory of the block periodization before executing the sessions. The program can be downloaded as a csv file using the dedicated button.
+
 ![Powerlifting Projection (2)](assets/screenshot_2.JPG)
 
 Upon completion of session, users should input their training into the database, the ensure the tracked ACWR and volume matches the projection. 
@@ -66,7 +69,7 @@ bar-trak/
 │   └── progression_calculator.py  # Autoregulation algorithms and projection logic
 ├── temp/                    # Local staging area for experimental development scripts
 └── README.md
-
+```
 ---
 
 ## Getting Started
