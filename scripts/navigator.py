@@ -52,7 +52,7 @@ df_intensity = get_intensity_data()
 df_acwr =get_acwr_data()
 
 # --- APP UI ---
-st.set_page_config(page_title='FORGE-TRAK', layout='wide')
+st.set_page_config(page_title='BAR-TRAK', layout='wide')
 
 st.markdown("""
     <style>
@@ -67,36 +67,59 @@ st.markdown("""
 # Selection for specific lift group 
 #choice = st.sidebar.selectbox("Select Choice", ['main lift', 'exercise name'])
 
+# --- GLOBAL NAVIGATION (SIDEBAR) ---
+with st.sidebar:
+    img_path = os.path.join(ASSETS_DIR, "logo.JPG")
+    if os.path.exists(img_path):
+        st.image(img_path, use_container_width=True)
+    st.markdown("---")
+    st.caption("BAR-TRAK Engine v1.0")
+
+
 # --- LAYER 1: Global View --- 
 if st.session_state.view == 'wide':
-    st.title("FORGE-TRAK")
-    st.subheader("Data-Driven Powerlifting Performance Metrics")
     
-    left_buffer, center_container, right_buffer = st.columns([1, 3, 1])
+    hero_col, buffer_col, stat_col = st.columns([3, 1, 1])
     
-    with center_container:
-        img_path = os.path.join(ASSETS_DIR, "main_asset.png")
-        st.image(img_path, use_container_width=True)
+    with hero_col:     
+        st.title("BAR-TRAK v1.0")
+        st.markdown("### Data-Driven Powerlifting Performance Metrics")
+        st.markdown(
+            """Welcome to the central computation engine. Select an operational module below 
+            <br> 
+            to analyze historical blocks or generate predictive load projections.""", unsafe_allow_html=True)
+    with buffer_col:
+        st.markdown("<br>", unsafe_allow_html=True)
         
-        st.info("##### Select a Procedure to Follow (Analysis/Projection)") 
+    with stat_col:
+        st.metric(label="Systemic Status", value="READY", delta="Database Connected")   
+    
+    st.markdown("<br>", unsafe_allow_html=True)
+    st.markdown("<br>", unsafe_allow_html=True)
+    
+    st.markdown("### Select a Prodecure")
+    
+    tab1, tab2 = st.tabs(["📊 Analysis Module", "🔮 Projection Engine"])
+    
+    with tab1:
+        st.markdown("#### Block Periodization Analysis")
+        st.markdown("Examine volume distribution, intensity trends, and fatigue accumulation patterns.")
+        if st.button("Initialize Analysis", key="launch_analysis"):
+            st.session_state.view = 'analysis'
+            st.rerun()
         
-        c1, c2 = st.columns(2)
-            
-        with c1:
-            if st.button("Analysis", use_container_width=True):
-                st.session_state.view = 'analysis'
-                st.rerun()
-                    
-        with c2:
-            if st.button("Projection", use_container_width=True):
-                st.session_state.view = 'projection'
-                st.rerun()
+    with tab2:
+        st.markdown("#### Load & RPE Projection Engine")
+        st.markdown("Calculate upcoming microcycle targets based on recent performance variance.")
+        if st.button("Launch Projection Engine", key='launch_projection'):
+            st.session_state.view = 'projection'
+            st.rerun()
     
         st.divider()
 
 # --- LAYER 2a: Analysis View --- 
 elif st.session_state.view == 'analysis':
-    st.title("FORGE-TRAK")
+    st.title("BAR-TRAK v1.0")
     st.subheader("Data-Driven Powerlifting Performance Metrics")
 
     # Top-bar navigation header for the sub-window
@@ -139,7 +162,7 @@ elif st.session_state.view in ["squat", "bench press", "deadlift"]:
 
     current_lift = st.session_state.view
     
-    st.title("FORGE-TRAK")
+    st.title("BAR-TRAK v1.0")
     st.subheader(f"{current_lift.title()} Performance")
 
     # Top-bar navigation header for the sub-window
@@ -196,7 +219,7 @@ elif st.session_state.view in ["squat", "bench press", "deadlift"]:
     
 # --- LAYER 2b: Projection View --- 
 elif st.session_state.view == 'projection':
-    st.title("FORGE-TRAK")
+    st.title("BAR-TRAK v1.0")
     st.subheader("Data-Driven Powerlifting Performance Metrics")
 
     # Top-bar navigation header for the sub-window
