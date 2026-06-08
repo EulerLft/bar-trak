@@ -8,7 +8,7 @@
 `bar-trak` is a Python-based computational engine and interactive Streamlit dashboard designed for lifters and coaches. 
 The application streamlines training tracking by conducting block periodization analytics, managing volume distribution, and computing autoregulated load projections based on recent performance metrics.
 
-**[🚀 Live Interactive App: https://credit-risk-engine-eulerlft.streamlit.app/](https://credit-risk-engine-eulerlft.streamlit.app/)**
+**[🚀 Live Interactive App: https://eulerlft-bar-trak.streamlit.app/](https://eulerlft-bar-trak.streamlit.app/)**
 
 --- 
 
